@@ -66,3 +66,8 @@ Following components are created:
     - Public IP of Webserver instance
     - VPC ID of VPC created
     - IP of NAT Gateway
+
+You can check by accessing the public DNS over `http`.
+
+- The Webserver is accessible via internet only on port `80` and `443` by default.
+- DB instance is only accessible from webserver instance only on `5432` port.
