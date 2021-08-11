@@ -43,7 +43,7 @@ resource "aws_instance" "db-server" {
   instance_type          = var.db-instance-type
   key_name               = var.key_name
   subnet_id              = aws_subnet.private_subnet.id
-  vpc_security_group_ids = [aws_security_group.web-server-sg.id]
+  vpc_security_group_ids = [aws_security_group.db-sg.id]
   monitoring             = true
   metadata_options {
     http_endpoint = "enabled"
