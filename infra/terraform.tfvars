@@ -1,4 +1,4 @@
-stack_name = "atlan-test" # Put stack name                                                     # Put EC2 Key name here.                                                            # allowed values are:  "production" and "poc"
+stack_name = "nilesh-test" # Put stack name                                                     # Put EC2 Key name here.                                                            # allowed values are:  "production" and "poc"
 
 # VPC Configuration
 vpc_config = {
