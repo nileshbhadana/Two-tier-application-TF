@@ -1,8 +1,8 @@
 resource "aws_instance" "web-server" {
-    depends_on = [
-      aws_route_table_association.public,
-      aws_route_table_association.private
-    ]
+  depends_on = [
+    aws_route_table_association.public,
+    aws_route_table_association.private
+  ]
   ami                    = data.aws_ami.ubuntu-ami.id
   instance_type          = var.web-server-instance-type
   key_name               = var.key_name
@@ -35,10 +35,10 @@ resource "aws_instance" "web-server" {
 }
 
 resource "aws_instance" "db-server" {
-    depends_on = [
-      aws_route_table_association.public,
-      aws_route_table_association.private
-    ]
+  depends_on = [
+    aws_route_table_association.public,
+    aws_route_table_association.private
+  ]
   ami                    = data.aws_ami.ubuntu-ami.id
   instance_type          = var.db-instance-type
   key_name               = var.key_name

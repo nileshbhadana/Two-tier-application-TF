@@ -33,8 +33,8 @@ resource "aws_subnet" "private_subnet" {
   cidr_block           = var.vpc_config.private_subnet
   availability_zone_id = data.aws_availability_zones.azs.zone_ids[1]
   tags = {
-    "Name"                                      = "${var.stack_name}-private-subnet",
-    "resource"                                  = "ec2-subnet"
+    "Name"     = "${var.stack_name}-private-subnet",
+    "resource" = "ec2-subnet"
   }
 }
 
@@ -113,31 +113,31 @@ resource "aws_security_group" "web-server-sg" {
   revoke_rules_on_delete = true
 
   ingress {
-    description     = "Allow Https traffic"
-    from_port       = 443
-    to_port         = 443
-    protocol        = "tcp"
+    description      = "Allow Https traffic"
+    from_port        = 443
+    to_port          = 443
+    protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
 
   ingress {
-    description     = "Allow Http traffic"
-    from_port       = 80
-    to_port         = 80
-    protocol        = "tcp"
+    description      = "Allow Http traffic"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
-  }  
+  }
 
   egress {
-      description     = "Allow egress traffic"
-      from_port        = 0
-      to_port          = 0
-      protocol         = "-1"
-      cidr_blocks      = ["0.0.0.0/0"]
-      ipv6_cidr_blocks = ["::/0"]
-    }
+    description      = "Allow egress traffic"
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+  }
 
 
   tags = {
@@ -159,7 +159,7 @@ resource "aws_security_group" "db-sg" {
     security_groups = [aws_security_group.web-server-sg.id]
   }
   egress {
-    description     = "Allow egress traffic"
+    description      = "Allow egress traffic"
     from_port        = 0
     to_port          = 0
     protocol         = "-1"

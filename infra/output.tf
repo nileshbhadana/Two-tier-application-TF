@@ -9,11 +9,11 @@ output "Web-Server-IP" {
 }
 
 output "VPC-Id" {
-    description = "ID for the VPC created"
-  value = aws_vpc.vpc.id
+  description = "ID for the VPC created"
+  value       = aws_vpc.vpc.id
 }
 
 output "NAT-Ip" {
-    description = "IP of NAT Gateway created"
-  value = aws_eip.nat_ip.public_ip
+  description = "IP of NAT Gateway created"
+  value       = aws_eip.nat_ip.public_ip
 }
