@@ -1,4 +1,4 @@
-stack_name = "nilesh-test" # Put stack name                                                     # Put EC2 Key name here.                                                            # allowed values are:  "production" and "poc"
+stack_name = "nilesh-test" # Put stack name
 
 # VPC Configuration
 vpc_config = {
@@ -11,4 +11,4 @@ vpc_config = {
 web-server-instance-type = "t2.micro"
 db-instance-type         = "t2.micro"
 
-key_name = "atlan-infra"
+key_name = "atlan-infra"   # Put EC2 Key name here.
