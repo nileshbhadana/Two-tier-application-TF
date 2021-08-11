@@ -2,6 +2,7 @@
 
 Terraform templates to create Two tier application infrastructure on AWS. 
 Following components are created:
+
     - VPC 
     - Security Groups
     - Subnet (Public and Private)
